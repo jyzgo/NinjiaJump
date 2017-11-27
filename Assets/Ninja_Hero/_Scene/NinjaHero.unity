@@ -551,15 +551,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 22484508, guid: 5130f5c05ddc54570a1a70a18e180dca, type: 2}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22484508, guid: 5130f5c05ddc54570a1a70a18e180dca, type: 2}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22484508, guid: 5130f5c05ddc54570a1a70a18e180dca, type: 2}
       propertyPath: m_AnchoredPosition.x
-      value: 136.84
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 22402648, guid: 5130f5c05ddc54570a1a70a18e180dca, type: 2}
       propertyPath: m_AnchorMin.y

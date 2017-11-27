@@ -2,9 +2,9 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class SoundManager : MonoBehaviour {
+public class NinjiaSoundManager : MonoBehaviour {
 
-    public static SoundManager Current;
+    public static NinjiaSoundManager Current;
 
     public SettingMgr _settingMgr;
 

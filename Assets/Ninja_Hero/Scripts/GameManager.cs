@@ -116,7 +116,7 @@ public class GameManager : MonoBehaviourHelper
 
 		ResetPosition ();
 
-		Util.SetCountGameOver(0);
+		NinjiaUtil.SetCountGameOver(0);
 	}
 	/// <summary>
 	/// Adding the touch listener to control player.
@@ -210,7 +210,7 @@ public class GameManager : MonoBehaviourHelper
 		isGameOver = false;
 		success = false;
 
-		Level = Util.GetLastLevelPlayed();
+		Level = NinjiaUtil.GetLastLevelPlayed();
 
 		Level l = levelManager.GetLevel (Level);
 		numberDotsOnCircle = l.numberDotsOnCircle;
@@ -436,7 +436,7 @@ public class GameManager : MonoBehaviourHelper
 		int numBlackTotal = 1;
 
 		float temp = 5 - this.Level%4f;
-		temp = LIST_SQUARE.Count / (1 + temp + Util.GetCountGameOver());
+		temp = LIST_SQUARE.Count / (1 + temp + NinjiaUtil.GetCountGameOver());
 
 		int iTemp = (int)(temp);
 
@@ -661,7 +661,7 @@ public class GameManager : MonoBehaviourHelper
 	/// </summary>
 	public void GameOver(Transform d)
 	{
-		Util.SetCountGameOver(Util.GetCountGameOver() + 1);
+		NinjiaUtil.SetCountGameOver(NinjiaUtil.GetCountGameOver() + 1);
 
 		CheckIfSuccess ();
 
@@ -788,7 +788,7 @@ public class GameManager : MonoBehaviourHelper
 		{
 			success = true;
 
-			Util.SetCountGameOver(0);
+			NinjiaUtil.SetCountGameOver(0);
 
 			canvasManager.ButtonLogic ();
 		}

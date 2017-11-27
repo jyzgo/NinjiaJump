@@ -31,7 +31,7 @@ public class Constant : MonoBehaviourHelper
 
 		shareMessage = 
 			"I'm on level "
-			+ Util.GetMaxLevelUnlock()
+			+ NinjiaUtil.GetMaxLevelUnlock()
 			+ "! #"
 			+ "Ninja Hero"
 			+ " by #appadvisory \n ";

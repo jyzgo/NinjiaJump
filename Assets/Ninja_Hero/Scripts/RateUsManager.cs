@@ -67,7 +67,7 @@ public class RateUsManager : MonoBehaviour
 	/// </summary>
 	void OnClickedLater()
 	{
-		Util.SetNumberOfLevelPLayed(0);
+		NinjiaUtil.SetNumberOfLevelPLayed(0);
 		HidePopup();
 	}
 	/// <summary>
@@ -75,7 +75,7 @@ public class RateUsManager : MonoBehaviour
 	/// </summary>
 	void OnClickedNever()
 	{
-		Util.SetNumberOfLevelPLayed(-1);
+		NinjiaUtil.SetNumberOfLevelPLayed(-1);
 		HidePopup();
 	}
 	/// <summary>
@@ -96,7 +96,7 @@ public class RateUsManager : MonoBehaviour
 		}
 		else
 		{
-			Util.SetNumberOfLevelPLayed(count);
+			NinjiaUtil.SetNumberOfLevelPLayed(count);
 		}
 
 		PlayerPrefs.Save();

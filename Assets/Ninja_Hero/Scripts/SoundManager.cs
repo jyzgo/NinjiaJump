@@ -16,7 +16,7 @@ public class SoundManager : MonoBehaviourHelper
 	{
 		get
 		{
-			return Util.SoundIsOn();
+			return NinjiaUtil.SoundIsOn();
 		}
 	}
 

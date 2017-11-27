@@ -4,7 +4,7 @@ using System.Collections;
 using UnityEngine.SceneManagement;
 #endif
 
-public static class Util
+public static class NinjiaUtil
 {
 	public static string COUNTGAMEOVER = "COUNTGAMEOVER";
 	public static string LAST_LEVEL_PLAYED = "LEVEL_PLAYED";

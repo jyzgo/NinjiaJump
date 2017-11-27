@@ -10,9 +10,9 @@ public class LevelManager : MonoBehaviourHelper
 {
 	void Awake()
 	{
-		int level = Util.GetLastLevelPlayed();
+		int level = NinjiaUtil.GetLastLevelPlayed();
 		if (level > 1200)
-			Util.SetLastLevelPlayed(1200);
+			NinjiaUtil.SetLastLevelPlayed(1200);
 	}
 
 
@@ -109,11 +109,11 @@ public class Level
 		if (level > maxLevel) 
 		{
 
-			Util.SetLastLevelPlayed(1200);
+			NinjiaUtil.SetLastLevelPlayed(1200);
 
 			level = 1200;
 
-			Util.SetMaxLevelUnlock(1200);
+			NinjiaUtil.SetMaxLevelUnlock(1200);
 
 			Application.OpenURL ("http://barouch.fr/moregames.php");
 

@@ -52,7 +52,7 @@ public class CanvasManager : MonoBehaviourHelper
 	{
 		get 
 		{
-			return Util.GetMaxLevelUnlock();
+			return NinjiaUtil.GetMaxLevelUnlock();
 		}
 	}
 	/// <summary>
@@ -62,7 +62,7 @@ public class CanvasManager : MonoBehaviourHelper
 	{
 		get 
 		{
-			return Util.GetLastLevelPlayed();
+			return NinjiaUtil.GetLastLevelPlayed();
 		}
 	}
 	/// <summary>
@@ -74,7 +74,7 @@ public class CanvasManager : MonoBehaviourHelper
 		buttonLastLevel.onClick.AddListener (() => {
 			buttonUnlock.transform.DOKill();
 			buttonUnlock.transform.DOScale(Vector3.zero,0.3f);
-			Util.SetCountGameOver(0);
+			NinjiaUtil.SetCountGameOver(0);
 			ButtonLogic ();
 			OnClickedButtonPreviousLevel();
 			ButtonLogic ();
@@ -84,7 +84,7 @@ public class CanvasManager : MonoBehaviourHelper
 		buttonNextLevel.onClick.AddListener (() => {
 			buttonNextLevel.transform.DOKill();
 			buttonNextLevel.transform.DOScale(Vector3.zero,0.3f);
-			Util.SetCountGameOver(0);
+			NinjiaUtil.SetCountGameOver(0);
 			ButtonLogic ();
 			OnClickedButtonNextLevel();
 			ButtonLogic ();
@@ -174,7 +174,7 @@ public class CanvasManager : MonoBehaviourHelper
 			Application.OpenURL ("https://barouch.fr/moregames.php");
 		});
 
-		if (!Util.SoundIsOn()) 
+		if (!NinjiaUtil.SoundIsOn()) 
 		{
 			music.Stop ();
 			buttonSound.transform.GetChild (0).gameObject.SetActive (false);
@@ -196,17 +196,17 @@ public class CanvasManager : MonoBehaviourHelper
 	/// </summary>
 	void TurnSound()
 	{
-		if (Util.SoundIsOn()) 
+		if (NinjiaUtil.SoundIsOn()) 
 		{
 			music.Stop ();
-			Util.SetSoundOff();
+			NinjiaUtil.SetSoundOff();
 			buttonSound.transform.GetChild (0).gameObject.SetActive (false);
 			buttonSound.transform.GetChild (1).gameObject.SetActive (true);
 		}
 		else 
 		{
 			music.Play ();
-			Util.SetSoundOn();
+			NinjiaUtil.SetSoundOn();
 			buttonSound.transform.GetChild (0).gameObject.SetActive (true);
 			buttonSound.transform.GetChild (1).gameObject.SetActive (false);
 		}
@@ -258,9 +258,9 @@ public class CanvasManager : MonoBehaviourHelper
 //			return;
 //		}
 
-		SetButtonActive(buttonLastLevel, Util.ActivateButtonLast());
+		SetButtonActive(buttonLastLevel, NinjiaUtil.ActivateButtonLast());
 
-		SetButtonActive(buttonNextLevel, Util.ActivateButtonNext());
+		SetButtonActive(buttonNextLevel, NinjiaUtil.ActivateButtonNext());
 
 	}
 	/// <summary>
@@ -357,7 +357,7 @@ public class CanvasManager : MonoBehaviourHelper
 	/// </summary>
 	public void AnimationCameraSuccess()
 	{
-		Util.SetCountGameOver(0);
+		NinjiaUtil.SetCountGameOver(0);
 
 		FindObjectOfType<RateUsManager>().CheckIfPromptRateDialogue();
 
@@ -375,9 +375,9 @@ public class CanvasManager : MonoBehaviourHelper
 		levelText.text = "Level " + level.ToString() + " / 1200";
 
 		if(level > maxLevel)
-			Util.SetMaxLevelUnlock(level);
+			NinjiaUtil.SetMaxLevelUnlock(level);
 
-		Util.SetLastLevelPlayed(level);
+		NinjiaUtil.SetLastLevelPlayed(level);
 
 		ButtonLogic ();
 

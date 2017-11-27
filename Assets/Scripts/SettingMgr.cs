@@ -492,7 +492,7 @@ public class SettingMgr : MonoBehaviour {
 
     void PlayToggleSound()
     {
-        SoundManager.Current.Play_switch(0);
+        NinjiaSoundManager.Current.Play_switch(0);
     }
     void OnsoundToggle(bool b)
     {
@@ -649,7 +649,7 @@ public class SettingMgr : MonoBehaviour {
     public void ShowVegasConfirmWindow()
     {
         VegasConfirmWindow.SetActive(true);
-        SoundManager.Current.Play_ui_open(0);
+        NinjiaSoundManager.Current.Play_ui_open(0);
 
     }
 
@@ -658,7 +658,7 @@ public class SettingMgr : MonoBehaviour {
     {
         if (VegasConfirmWindow.activeSelf)
         {
-            SoundManager.Current.Play_ui_close(0);
+            NinjiaSoundManager.Current.Play_ui_close(0);
         }
         var t = _vegasConfirmSlid.SlidOut();
 
@@ -681,7 +681,7 @@ public class SettingMgr : MonoBehaviour {
     {
         if(HowToPlay.activeSelf != true)
         {
-            SoundManager.Current.Play_ui_open(0);
+           NinjiaSoundManager.Current.Play_ui_open(0);
         }
         HowToPlay.SetActive(true);
 
@@ -692,7 +692,7 @@ public class SettingMgr : MonoBehaviour {
     {
         if (HowToPlay.activeSelf)
         {
-            SoundManager.Current.Play_ui_close(0);
+            NinjiaSoundManager.Current.Play_ui_close(0);
         }
        var t=  _howToSlidein.SlidOut();
         StartCoroutine(DelayHide(t, HowToPlay));
@@ -732,7 +732,7 @@ public class SettingMgr : MonoBehaviour {
     {
         if (SwitchVegasConfirm.activeSelf)
         {
-            SoundManager.Current.Play_ui_close(0);
+            NinjiaSoundManager.Current.Play_ui_close(0);
         }
         var t = _switchVegasSlid.SlidOut();
 
