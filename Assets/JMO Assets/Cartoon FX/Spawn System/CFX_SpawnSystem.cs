@@ -124,8 +124,8 @@ public class CFX_SpawnSystem : MonoBehaviour
 			#endif
 			
 			//Set flag to not destruct object
-			CFX_AutoDestructShuriken[] autoDestruct = newObj.GetComponentsInChildren<CFX_AutoDestructShuriken>(true);
-			foreach(CFX_AutoDestructShuriken ad in autoDestruct)
+			AutoDestroyParticle[] autoDestruct = newObj.GetComponentsInChildren<AutoDestroyParticle>(true);
+			foreach(AutoDestroyParticle ad in autoDestruct)
 			{
 				ad.OnlyDeactivate = true;
 			}
